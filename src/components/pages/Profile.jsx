@@ -9,6 +9,7 @@ function Profile() {
     name: 'John Doe',
     email: 'john.doe@example.com',
     sourcesAnalyzed: 100,
+    narrativesGenerated: 100,
     weavesCreated: 100,
     followers: 100,
     following: 100,
@@ -54,6 +55,7 @@ function Profile() {
       </article>
       <article className='profile-metrics-container'>
         <p>Sources Analyzed: {user.sourcesAnalyzed}</p>
+        <p>Narratives Generated: {user.narrativesGenerated}</p>
         <p>Weaves Created: {user.weavesCreated}</p>
         <p>Followers: {user.followers}</p>
         <p>Following: {user.following}</p>

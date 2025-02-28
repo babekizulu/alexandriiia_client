@@ -7,6 +7,9 @@ function SideBar() {
       <nav>
         <ul>
           <li>
+            <Link href='/dashboard' className='nav-item'>Dashboard</Link>
+          </li>
+          <li>
             <Link href="/profile" className='nav-item'>Profile</Link>
           </li>
           <li>
