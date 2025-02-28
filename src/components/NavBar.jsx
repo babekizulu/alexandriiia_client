@@ -8,8 +8,13 @@ const MENU_CONFIG = {
     file: {
         id: 'file',
         items: [
-            {id: 0, name: 'New', func: () => {
-                console.log('Created new file');
+            {id: 0, name: 'New', func: async () => {
+                try {
+                    const response = await axios.post('https://api.alexandriiia.com/projects/create');
+                    console.log(response.data);
+                } catch (error) {
+                    console.error('Error clearing pages:', error);
+                }
             }},
             {id: 1, name: 'Open', func: () => {
                 console.log('Opened file');
