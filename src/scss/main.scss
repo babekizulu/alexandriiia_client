@@ -1,0 +1,26 @@
+@import 'utils';
+
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include wh100;
+    background-color: $dark;
+    color: $light;
+    font-family: $os;
+}
+
+.app {
+    @include wh100;
+    @include grid1;
+}
+
+@import 'Header';
+@import 'Page';
+@import 'Home';
+@import 'Registration';
+@import 'Tablet';
+@import 'Mobile';

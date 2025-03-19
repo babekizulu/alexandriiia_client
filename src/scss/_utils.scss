@@ -1,0 +1,93 @@
+//mixins
+@mixin wh100 {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    
+}
+
+@mixin flex-row-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-row-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flex-row-evenly {
+    display: flex;  
+    justify-content: space-evenly;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@mixin grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+//colors
+$dark: #141414;
+$dark-active: #303030;
+$light: #fff;
+$light-active: #c9c9c9;
+$danger: rgb(224, 59, 59);
+$warning: rgb(224, 189, 59);
+$go: rgb(29, 136, 236);
+//fonts
+$os: 'Open Sans', sans-serif;
+$ns: 'Noto Sans', sans-serif;
+$ral: 'Raleway', sans-serif;
+//transitions
+$e: all 0.2s ease;
+$ei: all 0.2s ease-in;
+$eo: all 0.2s ease-out;
+$eio: all 0.2s ease-in-out;
+//breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1440px;
+
+
+

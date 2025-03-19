@@ -1,0 +1,29 @@
+.registration-header-container {
+    @include flex-column-center;
+    gap: 1rem;
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+}
+.registration-form-container {
+    @include flex-center;
+    form {
+        @include flex-column-center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    input {
+        padding: 0.8rem 3rem;
+        border-radius: 30px;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $dark;
+        margin-bottom: 0.5rem;
+    }
+}

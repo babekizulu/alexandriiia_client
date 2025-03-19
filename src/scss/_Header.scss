@@ -1,0 +1,14 @@
+@import 'utils';
+
+.header {
+    @include flex-center;
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid $dark-active;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}

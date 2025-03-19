@@ -1,0 +1,33 @@
+@import 'utils';
+
+.page {
+    position: relative;
+    top: 60px;
+}
+
+.button {
+    background-color: $light;
+    padding: 0.8rem 3rem;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: $dark;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: $eio;
+    &:hover {
+        background-color: $light-active;
+        transition: $eio;
+    }
+}
+
+.hero-text {
+    @include flex-column-center;
+    h1 {
+        font-family: $ral;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}
+
