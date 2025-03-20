@@ -1,0 +1,28 @@
+@media screen and (max-width: $bp-mobile) {
+    .hero-text {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .coming-soon {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .hero-text {
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+
+    .coming-soon {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    
+}

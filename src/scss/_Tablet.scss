@@ -1,0 +1,13 @@
+@media screen and (max-width: $bp-tablet) {
+    .hero-text {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .coming-soon {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
