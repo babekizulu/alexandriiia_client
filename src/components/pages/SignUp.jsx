@@ -1,18 +1,23 @@
 //libs
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+//components
+import Link from '../Link';
 //videos
 import video from '../videos/ALEXANDRiiiA.mp4';
+//hooks
+import useALXContext from '../../hooks/use-alx-context';
 
 function SignUp() {
+    //context
+    const {setSignedIn} = useALXContext();
     //state management
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [validated, setValidated] = useState(false);
-
+    const [error, setError] = useState('');
     //validation
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -30,15 +35,30 @@ function SignUp() {
     };
       
     //handlers
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const isEmailValid = validateEmail(email);
         const isNameValid = validateName(firstName) && validateName(lastName);
         const isPasswordValid = validatePassword(password) && password === confirmPassword;
-        setValidated(isEmailValid && isNameValid && isPasswordValid);
         
         if (isEmailValid && isNameValid && isPasswordValid) {
-            handleNavigation();
+            try {
+                const response = await axios.post('http://localhost:3000/signup', {
+                    firstName,
+                    lastName,
+                    email,
+                    password
+                }); 
+                if (response.status === 200) {
+                    setSignedIn(true);
+                    handleNavigation();
+                } else {
+                    setError('An error occurred while signing up. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error signing up:', error);
+                setError('An error occurred while signing up. Please try again.');
+            }
         }
     }
 
@@ -51,6 +71,7 @@ function SignUp() {
     return (
         <section className="page signup">
             <video className="home-video" src={video} autoPlay muted loop />
+            <Link href='/' className='button back-button'>back</Link>
             <article className='registration-header-container'>
                 <h1>sign up</h1>
                 <p>create an account to get started</p>
@@ -64,6 +85,9 @@ function SignUp() {
                     <input type='password' placeholder='confirm password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                     <button type='submit' className='button'>sign up</button>
                 </form>
+            </article>
+            <article className='error-message-container'>
+                {error && <p>{error}</p>}
             </article>
         </section>
     )

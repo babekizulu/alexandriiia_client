@@ -1,14 +1,36 @@
 @import 'utils';
 
 .header {
-    @include flex-center;
-    padding: 1rem;
+    @include flex-row-between;
     width: 100%;
     height: 60px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid $dark-active;
+    background-color: $dark-alpha;
     position: fixed;
     top: 0;
     z-index: 3;
+}
+
+.logo {
+    margin: 0.2rem 1rem;
+}
+
+.sign-out-button {
+    @include flex-center;
+    margin: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    background-color: $dark-active;
+    color: $light;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: $eio;
+    &:hover {
+        background-color: $light-active;
+        color: $dark-active;
+        transition: $eio;
+    }
 }

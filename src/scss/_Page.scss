@@ -5,6 +5,22 @@
     top: 60px;
 }
 
+.split-page {
+    position: relative;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+    padding: 2rem;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}
+
 .button {
     background-color: $light;
     padding: 0.8rem 3rem;
@@ -31,3 +47,103 @@
     }
 }
 
+.back-button {
+    position: fixed;
+    top: 60px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-header {
+    margin-top: 2rem;
+}
+
+.research-rack {
+    width: 1000px;
+    margin-top: 2rem;
+    border: 3px solid $light;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: scroll;
+    ul {
+        @include flex-row-center;
+        list-style: none;
+    }
+
+    a {
+        @include grid2;
+        margin-right: 2rem;
+        border: 3px solid $light;
+        background-color: $dark;
+        padding: 1rem;
+        text-decoration: none;
+        color: $light;
+        border-radius: 10px;
+        transition: $eio;
+        cursor: pointer;
+        &:hover {
+            border-color: $light-active;
+            background-color: $dark-active;
+            color: $light;
+            transition: $eio;
+        }
+    }
+}
+
+.weave-rack {
+    width: 1000px;
+    margin-top: 2rem;
+    border: 3px solid $light;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: scroll;
+    ul {
+        @include flex-row-center;
+        list-style: none;
+    }
+
+    a {
+        @include grid2;
+        margin-right: 2rem;
+        border: 3px solid $light;
+        background-color: $dark;
+        padding: 1rem;
+        border-radius: 10px;
+        text-decoration: none;
+        color: $light;
+        transition: $eio;
+        cursor: pointer;
+        &:hover {
+            border-color: $light-active;
+            background-color: $dark-active;
+            color: $light;
+            transition: $eio;
+        }
+    }
+}
+
+.topic-metadata {
+    @include flex-column-center;
+    width: 400px;
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+.weave-metadata {
+    @include flex-column-center;
+    width: 400px;
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}

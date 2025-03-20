@@ -1,0 +1,18 @@
+@import 'utils';
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 300px;
+    width: calc(100% - 400px);
+    border: 1px solid $dark-active;
+    padding: 0.8rem 3rem;
+    border-radius: 30px;
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}

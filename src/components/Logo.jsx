@@ -5,7 +5,7 @@ import logo from './icons/alexandriiia_58x58.svg';
 
 function Logo() {
     return (
-        <Link href="/">
+        <Link href="/" className="logo">
             <img src={logo} alt="logo" />
         </Link>
     )
