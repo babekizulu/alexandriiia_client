@@ -1,0 +1,15 @@
+@media screen and (max-width: $bp-mobile) {
+    .hero-text {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: $bp-small) {
+    .hero-text {
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+}

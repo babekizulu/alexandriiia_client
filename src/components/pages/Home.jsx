@@ -1,5 +1,3 @@
-//components
-import Link from '../Link';
 //videos
 import video from '../videos/ALEXANDRiiiA.mp4';
 function Home() {
@@ -11,10 +9,15 @@ function Home() {
                 <h1>or the future...</h1>
                 <h1>or where ever you want.</h1>
             </article>
-            <article className="registration-container">
+            <br/>
+            <br/>
+            <article className='hero-text'>
+                <h1>coming soon</h1>
+            </article>
+            {/* <article className="registration-container">
                 <Link href='/signup' className='button'>sign up</Link>
                 <Link href='/signin' className='button'>sign in</Link>
-            </article>
+            </article> */}
         </section>
     )
 }
