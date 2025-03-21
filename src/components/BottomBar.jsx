@@ -10,25 +10,25 @@ function BottomBar() {
                     <li>
                         <Link href='/'>
                             <FaHome className='icon'/>
-                            Home
+                            <span>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link href='/explore'>
                             <FaCompass className='icon'/>
-                            Explore
+                            <span>Explore</span>
                         </Link>
                     </li>
                     <li>
                         <Link href='/sources'>
                             <FaBook className='icon'/>
-                            Sources
+                            <span>Sources</span>
                         </Link>
                     </li>
                     <li>
                         <Link href='/help'>
                             <FaQuestion className='icon'/>
-                            Help
+                            <span>Help</span>
                         </Link>
                     </li>
                 </ul>

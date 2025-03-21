@@ -1,7 +1,55 @@
+@import 'utils';
+@media screen and (max-width: 912px) {
+    .header {
+        width: 100%;
+    }
+    .data-card {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .page-header {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .data-card-metadata {
+        @include grid1;
+    }
+    .sources {
+        width: 80%;
+    }
+}
 @media screen and (max-width: $bp-tablet) {
     .hero-text {
         h1 {
             font-size: 2.5rem;
         }
     }
+
+    .explore-grid {
+        @include grid1;
+    }
+
+    .page-header {
+        width: 90%;
+    }
+
+    .bottom-bar {
+        width: 90%;
+
+        span {
+            display: none;
+        }
+    }
+
+    .data-card {
+        width: 90%;
+    }
+
+    .data-card-metadata {
+        @include grid1;
+    }
+
+
 }

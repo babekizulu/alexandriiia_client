@@ -12,6 +12,8 @@ import Dashboard from './components/pages/Dashboard';
 import Research from './components/pages/Research';
 import Explore from './components/pages/Explore';
 import MechanicalInventions from './components/pages/MechanicalInventions';
+import Sources from './components/pages/Sources';
+import Help from './components/pages/Help';
 
 function App() {
     return (
@@ -25,6 +27,12 @@ function App() {
             </Route>
             <Route path="/mechanical-inventions">
                 <MechanicalInventions />
+            </Route>
+            <Route path="/sources">
+                <Sources />
+            </Route>
+            <Route path="/help">
+                <Help />
             </Route>
             <Route path="/signup">
                 <SignUp />

@@ -4,6 +4,55 @@
             font-size: 2rem;
         }
     }
+
+    .explore-grid {
+        a {
+            width: 80%;
+        }
+    }
+
+    .page-header {
+        width: 90%;
+    }
+
+    .add-form {
+        @include flex-column-center;
+        width: 100%;
+
+        form {
+            @include grid1;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        input[type='checkbox'] {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .checkbox-container {
+        @include grid1;
+        width: 80%;
+    }
+
+    .bottom-bar {
+
+        li {
+            margin: 0 1.8rem;
+        }
+
+        a {
+            gap: 0;
+        }
+    }
+
+    .data-card {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: $bp-small) {
@@ -11,5 +60,25 @@
         h1 {
             font-size: 1.7rem;
         }
+    }
+
+    .page-header {
+        width: 80%;
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .explore-grid {
+        @include grid1;
+    }
+
+    .explore-data-card {
+        width: 80%;
     }
 }
