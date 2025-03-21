@@ -11,7 +11,7 @@ function MechanicalInventions() {
     //state management
     const [showAddForm, setShowAddForm] = useState(false);
     const [contributor, setContributor] = useState('');
-    const [dateInvented, setDateInvented] = useState('');
+    const [dateInvented, setDateInvented] = useState(0);
     const [inventionName, setInventionName] = useState('');
     const [inventionType, setInventionType] = useState('');
     const [dimensions, setDimensions] = useState('');
@@ -23,7 +23,7 @@ function MechanicalInventions() {
     const [model, setModel] = useState('');
     const [modelImage, setModelImage] = useState('');
     const [regions, setRegions] = useState('');
-    const [numberOfCorroborativeSources, setNumberOfCorroborativeSources] = useState('');
+    const [numberOfCorroborativeSources, setNumberOfCorroborativeSources] = useState(0);
     const [sourceIds, setSourceIds] = useState('');
     const [sourcePageReferences, setSourcePageReferences] = useState('');
     const [primarySourceIds, setPrimarySourceIds] = useState('');
