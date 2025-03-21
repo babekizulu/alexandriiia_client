@@ -1,6 +1,6 @@
 //libs
 import { useState} from 'react';
-import mechanicalInventions from '../../libs/alexandriiia/mechanicalInventions.js';
+import mechanicalInventions from '../../libs/alexandriiia/mechanicalInventions';
 import { createInvention } from '../../libs/api';
 //components
 import MechanicalInventionsDataCard from '../datacards/MechanicalInventionsDataCard';
