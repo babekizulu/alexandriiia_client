@@ -124,7 +124,7 @@ function MechanicalInventions() {
                         <input value={model} type='text' placeholder='Model' onChange={(e) => setModel(e.target.value)} />
                         <input value={modelImage} type='text' placeholder='Model Image' onChange={(e) => setModelImage(e.target.value)} />
                         <input value={regions} type='text' placeholder='Regions' onChange={(e) => setRegions(e.target.value)} />
-                        <input value={numberOfCorroborativeSources} type='text' placeholder='Number of Corroborative Sources' onChange={(e) => setNumberOfCorroborativeSources(e.target.value)} />
+                        <input value={numberOfCorroborativeSources} type='number' placeholder='Number of Corroborative Sources' onChange={(e) => setNumberOfCorroborativeSources(e.target.value)} />
                         <input value={sourceIds} type='text' placeholder='Source IDs' onChange={(e) => setSourceIds(e.target.value)} />
                         <input value={sourcePageReferences} type='text' placeholder='Source Page References' onChange={(e) => setSourcePageReferences(e.target.value)} />
                         <input value={primarySourceIds} type='text' placeholder='Primary Source IDs' onChange={(e) => setPrimarySourceIds(e.target.value)} />
