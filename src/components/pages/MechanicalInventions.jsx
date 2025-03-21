@@ -105,8 +105,31 @@ function MechanicalInventions() {
             setError('');
 
         } catch (err) {
-            console.error('Error details:', err);
-            setError('Failed to add invention: ' + (err.response?.data?.message || err.message));
+            //console.error('Error details:', err);
+            // setError('Failed to add invention: ' + (err.response?.data?.message || err.message));
+        } finally {
+            setShowAddForm(false);
+            setContributor('');
+            setDateInvented('');
+            setInventionName('');
+            setInventionType('');
+            setDimensions('');
+            setIteration('');
+            setIterationOf('');
+            setMaterials('');
+            setInventor('');
+            setResearchGroups('');
+            setModel('');
+            setModelImage('');
+            setRegions('');
+            setNumberOfCorroborativeSources(0);
+            setSourceIds('');
+            setSourcePageReferences('');
+            setPrimarySourceIds('');
+            setAncient(false);
+            setModern(false);
+            setMultiRegional(false);
+            
         }
     };
 
