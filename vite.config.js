@@ -9,7 +9,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@libs': path.resolve(__dirname, './src/libs'),
-      '@components': path.resolve(__dirname, './src/components')
+      '@components': path.resolve(__dirname, './src/components'),
+      '@alexandriiia': path.resolve(__dirname, './src/alexandriiia')
     }
   },
   server: {
@@ -22,14 +23,6 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          data: ['@libs/alexandriiia/mechanicalInventions.js']
-        }
-      }
-    }
+    sourcemap: true
   }
 })
