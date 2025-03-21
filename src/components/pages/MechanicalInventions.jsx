@@ -1,7 +1,7 @@
 //libs
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import mechanicalInventions from '@alexandriiia/mechanicalInventions';
-import { createInvention } from '@libs/api';
+import { createInvention, getInventions } from '@libs/api';
 //components
 import MechanicalInventionsDataCard from '@components/datacards/MechanicalInventionsDataCard';
 //icons
@@ -31,6 +31,18 @@ function MechanicalInventions() {
     const [modern, setModern] = useState(false);
     const [multiRegional, setMultiRegional] = useState(false);
     const [error, setError] = useState('');
+
+    // Make initial request to warm up the server
+    useEffect(() => {
+        const warmUpServer = async () => {
+            try {
+                await getInventions();
+            } catch (error) {
+                console.error('Error warming up server:', error);
+            }
+        };
+        warmUpServer();
+    }, []);
 
     //mapped data
     const renderedMechanicalInventions = mechanicalInventions.map(invention => {
