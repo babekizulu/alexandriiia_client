@@ -21,35 +21,60 @@
     }
 }
 @media screen and (max-width: $bp-tablet) {
-    .hero-text {
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
-
-    .explore-grid {
-        @include grid1;
+    .header {
+        width: 100%;
+        padding: 1rem;
     }
 
     .page-header {
         width: 90%;
-    }
+        margin: 2rem auto;
+        text-align: center;
 
-    .bottom-bar {
-        width: 90%;
+        h1 {
+            font-size: 2.2rem;
+        }
 
-        span {
-            display: none;
+        p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
         }
     }
 
     .data-card {
         width: 90%;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
     }
 
     .data-card-metadata {
         @include grid1;
+        gap: 1rem;
     }
 
+    .sources {
+        width: 90%;
+        margin: 1rem auto;
+    }
 
+    .bottom-bar {
+        width: 90%;
+        padding: 0.75rem;
+        margin: 0 auto;
+
+        span {
+            display: none;
+        }
+
+        li {
+            margin: 0 1.5rem;
+        }
+    }
+
+    .explore-grid {
+        @include grid2;
+        gap: 1.5rem;
+        width: 90%;
+        margin: 2rem auto;
+    }
 }

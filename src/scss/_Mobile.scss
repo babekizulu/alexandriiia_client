@@ -1,3 +1,6 @@
+@import 'utils';
+
+// Mobile styles (max-width: 480px)
 @media screen and (max-width: $bp-mobile) {
     .hero-text {
         h1 {
@@ -5,27 +8,38 @@
         }
     }
 
-    .explore-grid {
-        a {
-            width: 80%;
-        }
-    }
-
     .page-header {
+        @include flex-column-center;
         width: 90%;
+        margin: 1rem auto;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
     }
 
     .add-form {
         @include flex-column-center;
-        width: 100%;
+        width: 90%;
+        margin: 1rem auto;
 
         form {
             @include grid1;
-            margin: auto;
+            gap: 1rem;
+            width: 100%;
         }
 
         input {
             width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid $light-active;
         }
 
         input[type='checkbox'] {
@@ -36,38 +50,108 @@
 
     .checkbox-container {
         @include grid1;
-        width: 80%;
+        width: 100%;
+        gap: 0.5rem;
+        margin: 1rem 0;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     }
 
     .bottom-bar {
+        @include flex-center;
+        width: 90%;
+        margin: auto;
+        padding: 0.5rem;
 
         li {
-            margin: 0 1.8rem;
+            margin: 0 1rem;
         }
 
         a {
-            gap: 0;
+            gap: 0.5rem;
         }
     }
 
     .data-card {
-        width: 80%;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem;
     }
-}
 
-@media screen and (max-width: 360px) {
-    .page-header {
-        @include flex-column-center;
-        width: 70%;
+    .data-card-metadata {
+        @include grid1;
+        gap: 1rem;
+        width: 100%;
+        padding: 0.5rem;
 
-        h1 {
-            font-size: 3rem;
+        p {
+            margin: 0.5rem;
+            font-size: 1rem;
         }
-        
-        
+    }
+
+    .research-rack,
+    .weave-rack {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        overflow-x: auto;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            width: 200px;
+            min-width: 200px;
+            margin-right: 1rem;
+            padding: 0.5rem;
+        }
+    }
+
+    .topic-metadata,
+    .weave-metadata {
+        width: 100%;
+        padding: 0.5rem;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .split-page {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .back-button {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .explore-grid {
+        @include grid1;
+        gap: 1rem;
+        width: 90%;
+        margin: 1rem auto;
+
+        a {
+            width: 100%;
+        }
     }
 }
 
+// Small mobile devices (max-width: 360px)
 @media screen and (max-width: $bp-small) {
     .hero-text {
         h1 {
@@ -76,22 +160,28 @@
     }
 
     .page-header {
-        width: 80%;
-
         h1 {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
     }
 
-    .explore-grid {
-        @include grid1;
+    .bottom-bar {
+        li {
+            margin: 0 0.5rem;
+        }
     }
 
-    .explore-data-card {
-        width: 80%;
+    .research-rack,
+    .weave-rack {
+        width: 95%;
+        
+        a {
+            width: 180px;
+            min-width: 180px;
+        }
     }
 }

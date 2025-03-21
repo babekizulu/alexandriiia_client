@@ -107,11 +107,11 @@ $ei: all 0.2s ease-in;
 $eo: all 0.2s ease-out;
 $eio: all 0.2s ease-in-out;
 //breakpoints
-$bp-small: 344px;
-$bp-mobile: 480px;
-$bp-tablet: 820px;
-$bp-desktop: 1024px;
-$bp-large: 1440px;
+$bp-small: 360px;    // Small mobile devices
+$bp-mobile: 480px;   // Standard mobile devices
+$bp-tablet: 768px;   // Tablets
+$bp-desktop: 1024px; // Desktop
+$bp-large: 1440px;   // Large screens
 
 
 

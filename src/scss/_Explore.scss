@@ -1,43 +1,62 @@
 .guide-container {
     @include flex-column-center;
-    padding: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
     h1 {
         font-size: 2rem;
         font-weight: 600;
         margin-bottom: 1rem;
+        text-align: center;
     }
+
     p {
         font-size: 1.2rem;
         line-height: 1.5;
+        text-align: center;
+        padding: 0 1rem;
     }
 }
 
 .explore-grid {
     @include grid4;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
     ul {
         list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
+
     li {
         @include flex-row-center;
-        gap: 3rem;
-        margin-bottom: 2rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
+
     a {
-        width: 500px;
-        height: 200px;
+        width: 100%;
+        min-height: 150px;
         border: 1px solid $dark-active;
         border-radius: 10px;
-        padding: 2rem;
+        padding: 1rem;
         @include flex-row-center;
-        gap: 3rem;
-        margin-bottom: 2rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
         color: $light;
         text-decoration: none;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         transition: $eio;
+        box-sizing: border-box;
 
         &:hover {
             border: 1px solid $light;
@@ -47,14 +66,65 @@
 
         p {
             @include flex-center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
+            margin: 0;
+            padding: 0;
         }
     }
-    
 }
 
 .explore-icon {
-    font-size: 7rem;
+    font-size: 4rem;
     color: $light;
+}
+
+// Tablet styles
+@media screen and (max-width: $bp-tablet) {
+    .explore-grid {
+        @include grid2;
+        gap: 1.5rem;
+    }
+
+    .guide-container {
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .explore-icon {
+        font-size: 3.5rem;
+    }
+}
+
+// Mobile styles
+@media screen and (max-width: $bp-mobile) {
+    .explore-grid {
+        @include grid1;
+        gap: 1rem;
+    }
+
+    .guide-container {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .explore-icon {
+        font-size: 3rem;
+    }
+
+    a {
+        p {
+            font-size: 1.2rem;
+        }
+    }
 }
