@@ -55,6 +55,19 @@
     }
 }
 
+@media screen and (max-width: 360px) {
+    .page-header {
+        @include flex-column-center;
+        width: 70%;
+
+        h1 {
+            font-size: 3rem;
+        }
+        
+        
+    }
+}
+
 @media screen and (max-width: $bp-small) {
     .hero-text {
         h1 {
