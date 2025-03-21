@@ -1,0 +1,60 @@
+.guide-container {
+    @include flex-column-center;
+    padding: 2rem;
+    h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+
+.explore-grid {
+    @include grid4;
+    gap: 2rem;
+    padding: 2rem;
+    ul {
+        list-style: none;
+    }
+    li {
+        @include flex-row-center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+    a {
+        width: 500px;
+        height: 200px;
+        border: 1px solid $dark-active;
+        border-radius: 10px;
+        padding: 2rem;
+        @include flex-row-center;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        color: $light;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: $eio;
+
+        &:hover {
+            border: 1px solid $light;
+            background-color: $dark-active;
+            transition: $eio;
+        }
+
+        p {
+            @include flex-center;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+.explore-icon {
+    font-size: 7rem;
+    color: $light;
+}

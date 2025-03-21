@@ -221,4 +221,4 @@ const mechanicalInventions = [
     },
 ]
 
-export default MechanicalInventions;
+export default mechanicalInventions;

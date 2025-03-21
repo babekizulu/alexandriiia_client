@@ -10,24 +10,21 @@ import SignUp from './components/pages/SignUp';
 import SignIn from './components/pages/SignIn';
 import Dashboard from './components/pages/Dashboard';
 import Research from './components/pages/Research';
-//hooks
-import useALXContext from './hooks/use-alx-context';
+import Explore from './components/pages/Explore';
+import MechanicalInventions from './components/pages/MechanicalInventions';
 
 function App() {
-    const {researchTopics, signedIn} = useALXContext();
-    const renderedResearchTopics = researchTopics.map((topic) => {
-        return (
-            <Route path={`/research/${topic.id}`} key={topic.id}>
-                <ResearchTopic name={topic.name} description={topic.description} />
-            </Route>
-        )
-    });
-
     return (
         <main className="app">
             <Header />
             <Route path="/">
                 <Home />
+            </Route>
+            <Route path="/explore">
+                <Explore />
+            </Route>
+            <Route path="/mechanical-inventions">
+                <MechanicalInventions />
             </Route>
             <Route path="/signup">
                 <SignUp />
@@ -41,9 +38,7 @@ function App() {
             <Route path="/research">
                 <Research />
             </Route>
-            {renderedResearchTopics}
-            {signedIn && <SideBar />}
-            {signedIn && <BottomBar />}
+            <BottomBar />
         </main>
     )
 }

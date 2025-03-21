@@ -1,18 +1,52 @@
 @import 'utils';
 
 .bottom-bar {
+    @include flex-center;
     position: fixed;
     bottom: 0;
-    left: 300px;
-    width: calc(100% - 400px);
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    width: 900px;
     border: 1px solid $dark-active;
     padding: 0.8rem 3rem;
     border-radius: 30px;
-    margin: 3rem;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 1rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    margin: 3rem auto;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    li {
+        @include flex-center;
+        margin: 0 3rem;
+    }
+
+    a {
+        @include flex-row-center;
+        gap: 0.7rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: $light;
+        transition: $eio;
+
+        &:hover {
+            color: $light-active;
+            background-color: $dark-active;
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.icon {
+    font-size: 1.5rem;
 }

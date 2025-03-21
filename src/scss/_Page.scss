@@ -23,7 +23,7 @@
 
 .button {
     background-color: $light;
-    padding: 0.8rem 3rem;
+    padding: 0.8rem 2.5rem;
     border-radius: 30px;
     border: none;
     margin-bottom: 2rem;
@@ -32,6 +32,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     transition: $eio;
+    cursor: pointer;
     &:hover {
         background-color: $light-active;
         transition: $eio;
@@ -147,3 +148,96 @@
         font-weight: 400;
     }
 }
+
+.data-grid {
+    @include flex-column-center;
+}
+
+.data-card {
+    @include flex-column-center;
+    width: 1000px;
+    border: 3px solid $light;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: $eio;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    &:hover {
+        border-color: $light-active;
+        background-color: $dark-active;
+        color: $light;
+        transition: $eio;
+    }
+}
+
+.data-card-metadata {
+    @include grid6;
+    p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 2rem;
+    }
+}
+
+.page-header {
+    @include flex-column-center;
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+}
+
+.add-button {
+    @include flex-center;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    border-radius: 50%;
+    color: $light;
+    font-size: 10rem;
+    font-weight: 600;
+    transition: $eio;
+    margin-top: 2rem;
+    &:hover {
+        background-color: $dark-active;
+        color: $light-active;
+        transition: $eio;
+    }
+}
+
+.add-form {
+    @include flex-column-center;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+
+    form {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    input {
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: 1px solid $light;
+        background-color: $dark;
+        color: $light;
+        flex: 0 1 200px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.checkbox-container {
+    @include flex-row-center;
+    gap: 3rem;
+}
+
